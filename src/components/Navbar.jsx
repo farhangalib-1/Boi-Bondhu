@@ -1,89 +1,54 @@
-'use client';
-import { useState } from "react";
-import { Link, Button } from "@heroui/react";
-import {ArrowRightToSquare} from '@gravity-ui/icons';
+'use client'
+import Link from 'next/link'
 import logo from "@/assets/logo.png";
-import Image from "next/image";
-function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+const Navbar = () => {
+    const pathName = usePathname();
+    console.log(pathName);
+    
   return (
-    <nav className="sticky top-0 z-40 w-full border-b border-separator bg-background/70 backdrop-blur-lg">
-      <header className="flex h-16 items-center justify-between px-6">
-        <div className="flex items-center gap-4">
-          <button
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <span className="sr-only">Menu</span>
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              {isMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
-          <div className="flex items-center gap-1">
-            <Image src={logo} alt="Boi Bondu Logo" width={60} height={60} />
-            <span className="font-bold">Boi Bondu</span>
-          </div>
-        </div>
-        <ul className="hidden items-center gap-4 md:flex">
-          <li>
-            <Link href="#">Home</Link>
-          </li>
-          <li>
-            <Link href="#">All Books</Link>
-          </li>
-          <li>
-            <Link href="#">My Profile</Link>
-          </li>
-        </ul>
-        <Button variant="secondary" size="sm">
-        <ArrowRightToSquare  />
-          Login
-        </Button>
-      </header>
-      {isMenuOpen && (
-        <div className="border-t border-separator md:hidden">
-          <ul className="flex flex-col gap-2 p-4">
-            <li>
-              <Link href="#" className="block py-2">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="block py-2">
-                All Books
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="block py-2">
-                My Profile
-              </Link>
-            </li>
-          </ul>
-        </div>
-      )}
-    </nav>
-  );
+    <div>
+      <div className="navbar bg-base-100 shadow-sm">
+  <div className="navbar-start">
+    <div className="dropdown">
+      <div tabIndex="0" role="button" className="$$btn $$btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+      </div>
+      <ul
+        tabIndex="-1"
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        <li><Link href="/">Home</Link></li>
+        <li>
+         <Link href="/books">Books</Link>
+        </li>
+        <li><Link href="/profile">My Profile</Link></li>
+      </ul>
+    </div>
+    <Link href="/" className="flex items-center text-xl">
+      <Image src={logo} alt="Boi Bondu Logo" width={60} height={60} />
+      <span className="ml-2 font-bold">
+    Boi Bondu
+    </span>
+    </Link>
+  </div>
+  <div className="navbar-center hidden lg:flex">
+    <ul className="menu menu-horizontal px-1">
+      <li><Link className={pathName === '/home' ? 'text-primary underline' : ''} href="/">Home</Link></li>
+      <li>
+       <Link className={pathName === '/books' ? 'text-primary underline' : ''} href="/books">Books</Link>
+      </li>
+      <li><Link className={pathName === '/profile' ? 'text-primary underline' : ''} href="/profile">My Profile</Link></li>
+    </ul>
+  </div>
+  <div className="navbar-end">
+    <Link href="/login" className="btn">
+      Login
+    </Link>
+  </div>
+</div>
+    </div>
+  )
 }
 
-export default Navbar;
+export default Navbar
