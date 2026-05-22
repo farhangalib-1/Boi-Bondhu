@@ -1,6 +1,7 @@
 import herobg from "@/assets/hero-bg.png";
 import herobg2 from "@/assets/hero-bg-2.png";
 import Image from 'next/image';
+import Booksdetails from "@/components/Booksdetails";
 import {HandPointRight} from '@gravity-ui/icons';
 import 'animate.css';
 const Homepage = () => {
@@ -22,7 +23,8 @@ const Homepage = () => {
       </button>
     </div>
   </div>
-</div>
+        </div>
+        <Booksdetails />
     </div>
   )
 }

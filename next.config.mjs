@@ -1,6 +1,27 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.haritbooks.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'rokbucket.rokomari.io',
+        port: '',
+        pathname: '/**',
+      },
+        {
+        protocol: 'https',
+        hostname: 'wafilife-media.wafilife.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
   reactCompiler: true,
 };
 
