@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 import {ArrowRightToSquare} from '@gravity-ui/icons';
 const Navbar = () => {
     const pathName = usePathname();
-    console.log(pathName);
     
   return (
     <div>
