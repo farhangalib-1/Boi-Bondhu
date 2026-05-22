@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "পথের পাঁচালী",
+    "author": "বিভূতিভূষণ বন্দ্যোপাধ্যায়",
+    "description": "গ্রামের জীবন, দারিদ্র্য এবং অপু-দুর্গার শৈশবের আবেগঘন গল্প।",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "https://www.haritbooks.com/wp-content/uploads/2022/03/pother_panchali.jpg"
+  },
+  {
+    "id": 2,
+    "title": "দেবদাস",
+    "author": "শরৎচন্দ্র চট্টোপাধ্যায়",
+    "description": "ভালোবাসা, বেদনা ও আত্মধ্বংসের এক কালজয়ী উপন্যাস।",
+    "category": "Story",
+    "available_quantity": 3,
+    "image_url": "https://rokbucket.rokomari.io/ProductNew20190903/260X372/Debdas-Saratchandra_Chattopadhyay-55e7d-345716.jpg"
+  },
+  {
+    "id": 3,
+    "title": "চাঁদের পাহাড়",
+    "author": "বিভূতিভূষণ বন্দ্যোপাধ্যায়",
+    "description": "আফ্রিকার জঙ্গলে শঙ্করের রোমাঞ্চকর অভিযানের গল্প।",
+    "category": "Story",
+    "available_quantity": 4,
+    "image_url": "https://wafilife-media.wafilife.com/uploads/2024/04/IMG-20240504-WA0016.jpg"
+  },
+  {
+    "id": 4,
+    "title": "রোবটিক্স",
+    "author": "সঞ্জিত মন্ডল",
+    "description": "রোবটিক্সের মৌলিক ধারণা ও প্রযুক্তি নিয়ে সহজ বাংলা বই।",
+    "category": "Tech",
+    "available_quantity": 7,
+    "image_url": "https://rokbucket.rokomari.io/ProductNew20190903/260X372/Robotics-Sanjita_Mandal-8b6dd-462023.jpg"
+  },
+  {
+    "id": 5,
+    "title": "পাইথন প্রোগ্রামিং 3.10",
+    "author": "জাকির হোসাইন",
+    "description": "বাংলায় পাইথন শেখার জন্য একটি সহজ ও ব্যবহারিক গাইড।",
+    "category": "Tech",
+    "available_quantity": 6,
+    "image_url": "https://wafilife-media.wafilife.com/uploads/2022/02/pithon-3.10-250x390.png"
+  },
+  {
+    "id": 6,
+    "title": "মারহাবা জাভাস্ক্রিপ্টে মারো থাবা",
+    "author": " ঝংকার মাহবুব",
+    "description": "JavaScript শেখার বাংলা বই।",
+    "category": "Tech",
+    "available_quantity": 5,
+    "image_url": "https://wafilife-media.wafilife.com/uploads/2025/02/Scan_20250305-2-250x376.jpg"
+  },
+  {
+    "id": 7,
+    "title": "মহাকাশের রহস্য",
+    "author": "অহ নওরোজ",
+    "description": "গ্রহ, নক্ষত্র ও মহাবিশ্ব সম্পর্কে আকর্ষণীয় তথ্যসমৃদ্ধ বই।",
+    "category": "Science",
+    "available_quantity": 8,
+    "image_url": "https://rokbucket.rokomari.io/ProductNew20190903/260X372/b456de07f_157840.jpg"
+  },
+  {
+    "id": 8,
+    "title": "বাঙালি বিজ্ঞানীর গল্প (সেরা বাংলার, সেরা বিজ্ঞানী)",
+    "author": "হিমাদ্রি শর্মা",
+    "description": "বিশ্ববিখ্যাত বিজ্ঞানীদের জীবন ও আবিষ্কারের গল্প।",
+    "category": "Science",
+    "available_quantity": 4,
+    "image_url": "https://wafilife-media.wafilife.com/uploads/2022/01/%E0%A6%AC%E0%A6%BE%E0%A6%99%E0%A6%BE%E0%A6%B2%E0%A6%BF-%E0%A6%AC%E0%A6%BF%E0%A6%9C%E0%A7%8D%E0%A6%9E%E0%A6%BE%E0%A6%A8%E0%A7%80%E0%A6%B0-%E0%A6%97%E0%A6%B2%E0%A7%8D%E0%A6%AA-%E0%A6%B8%E0%A7%87%E0%A6%B0%E0%A6%BE-%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%B0-%E0%A6%B8%E0%A7%87%E0%A6%B0%E0%A6%BE-%E0%A6%AC%E0%A6%BF%E0%A6%9C%E0%A7%8D%E0%A6%9E%E0%A6%BE%E0%A6%A8%E0%A7%80-250x388.jpg"
+  },
+  {
+    "id": 9,
+    "title": "জীববিজ্ঞানের মজার প্রশ্ন ও উত্তর",
+    "author": "বুশরানা সিদ্দিক",
+    "description": "জীববিজ্ঞানের বিভিন্ন মজার ও অজানা তথ্য নিয়ে বই।",
+    "category": "Science",
+    "available_quantity": 6,
+    "image_url": "https://wafilife-media.wafilife.com/uploads/2020/12/%E0%A6%9C%E0%A7%80%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%9C%E0%A7%8D%E0%A6%9E%E0%A6%BE%E0%A6%A8%E0%A7%87%E0%A6%B0-%E0%A6%AE%E0%A6%9C%E0%A6%BE%E0%A6%B0-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B6%E0%A7%8D%E0%A6%A8-%E0%A6%93-%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A6%B0.jpg"
+  },
+  {
+    "id": 10,
+    "title": "হিমু",
+    "author": "হুমায়ূন আহমেদ",
+    "description": "অদ্ভুত জীবনদর্শনের রহস্যময় চরিত্র হিমুর গল্প।",
+    "category": "Story",
+    "available_quantity": 9,
+    "image_url": "https://rokbucket.rokomari.io/ProductNew20190903/260X372/0e743778fca4_1277.gif"
+  },
+  {
+    "id": 11,
+    "title": "ফেলুদা সমগ্র",
+    "author": "সত্যজিৎ রায়",
+    "description": "বিখ্যাত গোয়েন্দা ফেলুদার রোমাঞ্চকর তদন্ত কাহিনি।",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "https://baatighar.com/web/image/product.template/12122/image_1024?unique=fa5fc06"
+  },
+  {
+    "id": 12,
+    "title": "কৃত্রিম বুদ্ধিমত্তা",
+    "author": "ড. মোঃ আল-আমিন ভূঁইয়া",
+    "description": "AI ও মেশিন লার্নিং সম্পর্কে বাংলা ভাষায় পরিচিতিমূলক বই।",
+    "category": "Tech",
+    "available_quantity": 7,
+    "image_url": "https://rokbucket.rokomari.io/ProductNew20190903/260X372/3ddcb5ffb_9631.jpg"
+  }
+]
