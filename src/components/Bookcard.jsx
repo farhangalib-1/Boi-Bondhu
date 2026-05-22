@@ -1,6 +1,8 @@
+import { Button } from '@heroui/react'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
-
+import {Eye} from '@gravity-ui/icons';
 const Bookcard = ({params}) => {
   return (
     <div>
@@ -26,6 +28,10 @@ const Bookcard = ({params}) => {
       <div className="badge badge-outline">{params.category}</div>
     </div>
   </div>
+  <Link href={`/book/${params.id}`}>
+    <Button variant="primary">
+        <Eye /> View Details</Button>
+  </Link>
 </div>
     </div>
   )

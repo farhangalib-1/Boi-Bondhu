@@ -21,7 +21,7 @@ const Navbar = () => {
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li><Link href="/">Home</Link></li>
         <li>
-         <Link href="/books">Books</Link>
+         <Link href="/books">All Books</Link>
         </li>
         <li><Link href="/profile">My Profile</Link></li>
       </ul>
@@ -37,7 +37,7 @@ const Navbar = () => {
     <ul className="menu menu-horizontal px-1 font-medium">
       <li><Link className={pathName === '/home' ? 'text-primary underline' : ''} href="/">Home</Link></li>
       <li>
-       <Link className={pathName === '/books' ? 'text-primary underline' : ''} href="/books">Books</Link>
+       <Link className={pathName === '/books' ? 'text-primary underline' : ''} href="/books">All Books</Link>
       </li>
       <li><Link className={pathName === '/profile' ? 'text-primary underline' : ''} href="/profile">My Profile</Link></li>
     </ul>
