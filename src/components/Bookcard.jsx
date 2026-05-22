@@ -6,7 +6,7 @@ import {Eye} from '@gravity-ui/icons';
 const Bookcard = ({params}) => {
   return (
     <div>
-      <div className="card bg-base-100 w-96 shadow-sm">
+      <div className="card h-full bg-base-100 w-96 shadow-sm">
   <figure>
     <Image
       src={params.image_url}
@@ -18,14 +18,14 @@ const Bookcard = ({params}) => {
   <div className="card-body">
     <h2 className="card-title">
       {params.title}
-      <div className="badge badge-secondary">Top Rated</div>
+      <div className="badge badge-secondary">{params.category}</div>
     </h2>
     <h2 className="card-title text-sm text-gray-500">
         {params.author}
     </h2>
     <p>{params.description}</p>
     <div className="card-actions justify-end">
-      <div className="badge badge-outline">{params.category}</div>
+      
     </div>
   </div>
   <Link href={`/book/${params.id}`}>
