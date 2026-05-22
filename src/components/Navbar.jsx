@@ -3,6 +3,7 @@ import Link from 'next/link'
 import logo from "@/assets/logo.png";
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import {ArrowRightToSquare} from '@gravity-ui/icons';
 const Navbar = () => {
     const pathName = usePathname();
     console.log(pathName);
@@ -27,13 +28,13 @@ const Navbar = () => {
     </div>
     <Link href="/" className="flex items-center text-xl">
       <Image src={logo} alt="Boi Bondu Logo" width={60} height={60} />
-      <span className="ml-2 font-bold">
-    Boi Bondu
-    </span>
+      <span className="font-bold text-[#132f52]">
+            Boi <span className="text-[#538c48]">Bondu</span>
+      </span>
     </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
+    <ul className="menu menu-horizontal px-1 font-medium">
       <li><Link className={pathName === '/home' ? 'text-primary underline' : ''} href="/">Home</Link></li>
       <li>
        <Link className={pathName === '/books' ? 'text-primary underline' : ''} href="/books">Books</Link>
@@ -42,8 +43,12 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <Link href="/login" className="btn">
-      Login
+
+    <Link href="/login">
+    <button className="btn rounded-full bg-transparent border border-[#538c48] text-[#538c48] hover:bg-[#538c48]  hover:text-white transition-colors duration-300">
+        <ArrowRightToSquare />
+        <span >Login</span>
+    </button>
     </Link>
   </div>
 </div>
