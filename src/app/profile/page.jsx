@@ -7,7 +7,6 @@ import Link from 'next/link'
 
 const Profilepage = () => {
   const { data: session } = authClient.useSession() 
-  console.log(session.user)
   return (
     <div className='flex justify-center'>
         <div className='w-4/12 border my-10 rounded-lg border-gray-300 p-5'>
