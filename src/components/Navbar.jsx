@@ -1,10 +1,19 @@
 'use client'
+import { authClient } from "@/lib/auth-client"
 import Link from 'next/link'
 import logo from "@/assets/logo.png";
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import {ArrowRightToSquare} from '@gravity-ui/icons';
 const Navbar = () => {
+  const { data: user } = authClient.useSession()
+ 
+ 
+
+  
+
+ 
+  
     const pathName = usePathname();
     
   return (
@@ -42,13 +51,22 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-
-    <Link href="/login">
-    <button className="btn rounded-full bg-transparent border border-[#538c48] text-[#538c48] hover:bg-[#538c48]  hover:text-white transition-colors duration-300">
-        <ArrowRightToSquare />
-        <span >Login</span>
-    </button>
-    </Link>
+   {
+    user ? <div className="flex items-center gap-4">
+      <h1> Welcome, {user.user.name}</h1>
+      <button onClick={() => authClient.signOut()} className="btn rounded-full bg-transparent border border-[#538c48] text-[#538c48] hover:bg-[#538c48]  hover:text-white transition-colors duration-300">
+        Logout
+      </button>
+    </div>
+     : 
+      <Link href="/login">
+        <button className="btn rounded-full bg-transparent border border-[#538c48] text-[#538c48] hover:bg-[#538c48]  hover:text-white transition-colors duration-300">
+          <ArrowRightToSquare />
+          <span >Login</span>
+        </button>
+      </Link>
+    }
+    
   </div>
         </div>
     </div>

@@ -2,6 +2,7 @@
 import { ToastContainer, toast } from 'react-toastify';
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
+import { FcGoogle } from "react-icons/fc";
 import {
   Button,
   Card,
@@ -15,6 +16,11 @@ import {
 import Link from "next/link";
 
 export default function LoginPage() {
+    const signIn = async () => {
+  const data = await authClient.signIn.social({
+    provider: "google",
+  });
+};
     const success = () => {toast.success('Login Successfully');}
     const fail = () => {toast.error('Email or Password is incorrect');}
   const onSubmit = async (e) => {
@@ -83,6 +89,10 @@ export default function LoginPage() {
         <Link href="/signup">
            <span className="text-sm"> Don't have an account? <span className="text-blue-500 hover:underline">Sign up</span> </span>
           </Link>
+          <Button  variant="outline" className="w-full mt-4" onClick={signIn}>
+            <FcGoogle />
+            Sign in with Google
+          </Button>
       </Form>
       <ToastContainer/>
     </Card>

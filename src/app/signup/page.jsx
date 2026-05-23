@@ -1,4 +1,5 @@
 "use client";
+import { ToastContainer, toast } from 'react-toastify';
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import {
@@ -12,8 +13,12 @@ import {
   TextField,
 } from "@heroui/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function SignUpPage() {
+    const success = () => {toast.success('Registration is completed Successfully');}
+    const fail = () => {toast.error('User e-mail Already Exist. Try another e-mail');}
+    const router = useRouter();
   const onSubmit = async (e) => {
     e.preventDefault();
     
@@ -24,10 +29,14 @@ export default function SignUpPage() {
         email: data.email,
         password: data.password,
         image: data.image,
-        callbackURL: "/login"
     })
-    console.log(res)
-    
+    if(!error){
+        success();
+        router.push('/login')
+    }
+    else{
+        fail();
+    }
   };
 
   return (
@@ -104,6 +113,7 @@ export default function SignUpPage() {
                    <span className="text-sm"> Have an account? <span className="text-blue-500 hover:underline">Login</span> </span>
                   </Link>
       </Form>
+            <ToastContainer/>
     </Card>
   );
 }
