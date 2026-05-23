@@ -1,10 +1,14 @@
-import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import { Geist, Geist_Mono, Hind_Siliguri, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
+   weight: ["400", "500", "600", "700"]
+});
+export const hind_shiliguri = Hind_Siliguri({
+  subsets: ["bengali", "latin"],
    weight: ["400", "500", "600", "700"]
 });
 
@@ -24,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${poppins.className} h-full antialiased`}
+      className={`${hind_shiliguri.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
        <Navbar />
