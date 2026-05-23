@@ -6,14 +6,8 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import {ArrowRightToSquare} from '@gravity-ui/icons';
 const Navbar = () => {
-  const { data: user } = authClient.useSession()
- 
- 
-
-  
-
- 
-  
+  const userData = authClient.useSession()
+  console.log(userData.data?.user);
     const pathName = usePathname();
     
   return (
@@ -52,8 +46,8 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
    {
-    user ? <div className="flex items-center gap-4">
-      <h1> Welcome, {user.user.name}</h1>
+     userData.data?.user ? <div className="flex items-center gap-4">
+      <h1> Welcome, {userData.data?.user.name}</h1>
       <button onClick={() => authClient.signOut()} className="btn rounded-full bg-transparent border border-[#538c48] text-[#538c48] hover:bg-[#538c48]  hover:text-white transition-colors duration-300">
         Logout
       </button>
@@ -67,7 +61,7 @@ const Navbar = () => {
       </Link>
     }
     
-  </div>
+  </div> 
         </div>
     </div>
   )

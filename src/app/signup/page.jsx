@@ -30,6 +30,8 @@ export default function SignUpPage() {
         password: data.password,
         image: data.image,
     })
+
+    console.log(res);
     if(!error){
         success();
         router.push('/login')
