@@ -1,3 +1,4 @@
+
 import { Geist, Geist_Mono, Hind_Siliguri, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
